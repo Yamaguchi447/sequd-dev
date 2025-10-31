@@ -1,0 +1,28 @@
+
+default:
+  dir_name: outputs
+  resource: "local"
+  groups: gcc50549
+  reserve: None
+  r_seed: 317
+
+objective:
+  name: bbob
+  direction: "minimize"
+  func_id: 1
+  dim: 2
+  min_bound: -5
+  max_bound: 5
+  X_opt: True # 元はTrue
+  F_opt: False
+
+sampler:
+  name: RandomSearch
+  n_trials: 200
+  pop_size: 30
+  importance: True
+  inverse: False
+  correction: True
+  augud: False # 元々False
+  thld_scale: linear
+  sigmoid_coef: 1
